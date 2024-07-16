@@ -1,0 +1,85 @@
+echo "Hello Yash"
+
+echo "hello $(date)"
+
+read name
+
+echo $name
+
+touch one.txt
+
+grep "Fruit" one.txt
+
+echo "==============================="
+
+grep -i "fruit" one.txt
+
+echo "==============================="
+
+grep -v "fruit" one.txt
+
+echo "==============================="
+
+grep -v -i "fruit" one.txt
+
+echo "==============================="
+
+grep -n -i "fruit" one.txt
+
+echo "==============================="
+
+grep -c -i "fruit" one.txt
+
+# Write a command to display msg with date and time.
+
+echo "Hello This is current date & time = $(date) "
+
+# write to differnrt command to display all hidden files in current working dir.
+
+ls -a
+
+# write a command display a list of loggin user and store that list in file.
+
+hostname >> one.txt
+
+# write command to find all files that do not have .txt extention.
+
+touch a2.png
+
+touch a3.sql
+
+find . ! -name "*.txt"
+
+# write a command to display a messege with the current username and syatem name
+
+echo "Current User Name : $(whoami), System Name : $(hostname)"
+
+#  write a command to display all lines with line number containing the word Z 0 1 in specific file.
+
+grep -n -i "z01" one.txt
+
+# write a command to display messege with current time & date
+
+echo "Date : $(date)"
+
+# write a command to display a lines begining with "nokia" in specific file
+
+grep "^Nokia" one.txt
+
+
+# w a c t d 
+
+pwd
+
+mkdir mca
+
+cd mca
+
+mkdir yash 
+
+cd yash 
+
+touch new.txt
+
+grep "^apple"
+
