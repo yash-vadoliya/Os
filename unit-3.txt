@@ -1,0 +1,100 @@
+#                             Online Bash Shell.
+#                 Code, Compile, Run and Debug Bash script online.
+# Write your code in this editor and press "Run" button to execute it.
+
+# PRO -1
+echo "Enter First Number :";
+read val1
+echo "Enter Second Number :";
+read val2
+echo "The First Number = $val1, Second Number = $val2"
+
+#unset Variable
+unset val1
+unset val2
+
+echo "First Unset Number = $val1, Second Unset Number = $val2"
+
+################################################
+echo "Enter Number : "
+read no1
+
+if [[ "$no1" -gt "10" ]] ; then
+    echo "Number is Greater Than 10"
+elif [[ "$no1" = "10" ]]; then
+    echo "Number is 10"
+else
+    echo "Number is not 10"
+fi
+##########################################
+
+# PRO -2
+echo "Enter File Name : "
+read file_name
+echo "Enter Letter : "
+read letter
+
+if [ ! -f "$file_name" ]; then
+echo "Error! file $file_name is not found!"
+exit 1
+fi
+
+while IFS= read -r line; do
+if [[ "$line" == "$letter"* ]]; then
+echo "$line"
+fi
+done< "$file_name"
+
+exit 
+
+#################################################
+
+echo "Enter Subject 1 Mark"
+read sub1
+echo "Enter Subject 2 Mark"
+read sub2
+echo "Enter Subject 3 Mark"
+read sub3
+
+total=$((sub1+sub2+sub3))
+echo "$total"
+
+per=$((total/3))
+echo "$per"
+
+if [[ "$per" -ge "90" ]]; then
+    echo "Grade A"
+elif [[ "$per" -le "90" ]] && [[ "$per" -ge "80"]]; then
+    echo "Grade B"
+elif [[ "$per" -le "80" ]] && [[ "$per" -ge "70"]]; then
+    echo "Grade C"
+elif [[ "$per" -le "70" ]] && [[ "$per" -ge "60"]]; then
+    echo "Grade D"
+else 
+    echo "--"
+fi
+
+# if [[ "$per" -ge "90" ]] ; then
+# echo "Grade A"
+# elif [[ "$per" -ge "90" ]]; then
+# echo "Grade B"
+# elif [[ "$per" -ge "80" ]]; then
+# echo "Grade C"
+# elif [[ "$per" -ge "70" ]]; then
+# echo "Grade D"
+# else
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
